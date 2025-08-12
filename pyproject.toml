@@ -1,0 +1,36 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "truck_svi"
+version = "0.0.1"
+description = "study trucks' delay with svi"
+authors = [
+  { name = "koichi" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+dependencies = [
+    "python-dotenv>=0.19.2",
+    "zensvi>=1.3.2",
+]
+
+
+[tool.ruff]
+line-length = 99
+src = ["truck_svi"]
+include = ["pyproject.toml", "truck_svi/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["truck_svi"]
+force-sort-within-sections = true
+
