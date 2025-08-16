@@ -15,13 +15,13 @@ def main():
         batch_list = os.listdir(os.path.join(base_path, "gsv_panorama"))
         for batch in batch_list:
             # Set the input and output directories
-            dir_input = os.path.join(base_path, "perspective", batch)
+            dir_input = os.path.join(base_path, "perspective", batch, "perspective")
 
             # segment images
             dir_image_output = os.path.join(base_path, "segmented", batch)
             os.makedirs(dir_image_output, exist_ok=True)
             segmenter.segment(dir_input=dir_input, 
-                              dir_output=dir_image_output,
+                              dir_image_output=dir_image_output,
                               dir_summary_output=base_path,
                               save_format="csv",
                               csv_format="wide")
