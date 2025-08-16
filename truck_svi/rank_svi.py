@@ -206,7 +206,7 @@ def create_sample_images_plot(image_df, samples_per_bin=10):
     
     # Create figure
     fig, axes = plt.subplots(n_bins, samples_per_bin, 
-                            figsize=(samples_per_bin * 2, n_bins * 2))
+                            figsize=(samples_per_bin * 1, n_bins * 1))
     
     if n_bins == 1:
         axes = axes.reshape(1, -1)
@@ -240,7 +240,7 @@ def create_sample_images_plot(image_df, samples_per_bin=10):
         axes[bin_idx, 0].text(-0.1, 0.5, f'{bin_name}\nPercentile', 
                              rotation=90, ha='center', va='center', 
                              transform=axes[bin_idx, 0].transAxes,
-                             fontsize=10, fontweight='bold')
+                             fontsize=8, fontweight='bold')
     
     plt.suptitle(f'Sample Street View Images by Speed Percentile\n({samples_per_bin} samples per percentile)', 
                  fontsize=14, fontweight='bold')
@@ -412,7 +412,7 @@ def create_sample_images_plot_city(image_df, city, samples_per_bin=10):
     
     # Create figure
     fig, axes = plt.subplots(n_bins, samples_per_bin, 
-                            figsize=(samples_per_bin * 2, n_bins * 2))
+                            figsize=(samples_per_bin * 1, n_bins * 1))
     
     if n_bins == 1:
         axes = axes.reshape(1, -1)
@@ -445,7 +445,7 @@ def create_sample_images_plot_city(image_df, city, samples_per_bin=10):
         axes[bin_idx, 0].text(-0.1, 0.5, f'{bin_name}\nPercentile', 
                              rotation=90, ha='center', va='center', 
                              transform=axes[bin_idx, 0].transAxes,
-                             fontsize=10, fontweight='bold')
+                             fontsize=8, fontweight='bold')
     
     plt.suptitle(f'Sample Street View Images by Speed Percentile - {city.title()}\n({samples_per_bin} samples per percentile)', 
                  fontsize=14, fontweight='bold')
