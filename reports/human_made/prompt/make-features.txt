@@ -1,0 +1,5 @@
+write @make_features_svi.py 
+- I've downloaded,  transofmred (from panoram to 90 degree perspective), and segmented street view images
+- Can you write code to compute the distance weighted segmentation features (excluding road class), the distance should be the distance from the middle line of the perspective image (middle line in the 0 degree perspective image), 
+
+- make sure to read as many intermediate files as needed to ensure that you understand the context.

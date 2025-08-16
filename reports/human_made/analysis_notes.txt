@@ -1,0 +1,5 @@
+- Download SVI, compute the dist, and find the nearest SVI from each street segment
+- transform the SVI to perspective
+- segmentation
+- road distance weighted segmentation
+- run regression
